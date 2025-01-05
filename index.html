@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <title>My Portofolio</title>
+</head>
+
+<body style="background-image: url('background/foto5.jpeg');  background-size: cover; background-position: center; background-repeat: no-repeat; 
+background-attachment: fixed;">
+  <header class="sticky top-0 z-10 bg-transparent backdrop-blur-lg text-lg font-sans">
+    <div class="container mx-auto flex items-center justify-start md:justify-center py-4 px-6">
+      <!-- Hamburger Icon for Mobile -->
+      <div class="lg:hidden">
+        <button id="hamburger" class="text-biru focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Navigation Links (Visible on desktop) -->
+      <nav class="hidden lg:flex space-x-8">
+        <a href="#about-me" class="text-biru hover:text-biru font-medium hover:border-b-2 hover:border-biru">About
+          Me</a>
+        <a href="#cv" class="text-biru hover:text-biru font-medium hover:border-b-2 hover:border-biru">CV</a>
+        <a href="#pengalaman"
+          class="text-biru hover:text-biru font-medium hover:border-b-2 hover:border-biru">Experiences</a>
+        <a href="#kursus" class="text-biru hover:text-biru font-medium hover:border-b-2 hover:border-biru">Courses</a>
+        <a href="#skill" class="text-biru hover:text-biru font-medium hover:border-b-2 hover:border-biru">Skills</a>
+      </nav>
+      <!-- Dropdown Menu for Mobile (Hidden by default) -->
+      <div id="mobile-menu" class="lg:hidden hidden absolute top-16 bg-white shadow-md py-4 px-6 rounded-lg space-y-4">
+        <!-- Navigasi Vertikal -->
+        <a href="#about-me" class="block hover:text-biru font-medium">About Me</a>
+        <a href="#resume" class="block hover:text-kuning font-medium">CV</a>
+        <a href="#pengalaman" class="block hover:text-biru font-medium">Experience</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6">
+    <!-- Selamat Datang -->
+    <section id="selamat-datang"
+      class="flex flex-col-reverse lg:flex-row justify-between items-center w-full bg-transparent backdrop-blur-lg rounded-xl p-8 min-h-screen"
+      data-aos="fade-right" data-aos-duration="1000">
+      <!-- Kiri: Text -->
+      <div class="text-left lg:text-left mb-8 lg:mb-0">
+        <h1 class="text-5xl md:text-8xl font-bold text-kuning">Hi,</h1>
+        <h2 class="text-6xl md:text-9xl font-bold mb-10">
+          <span class="text-gray-800">I'm</span>
+          <span class="text-biru border-b-4 border-biru">Razan</span>
+        </h2>
+        <h2 class="text-xl md:text-3xl font-semibold text-gray-700 mb-10">
+          <span id="typed-text">Environmental Engineering</span>
+        </h2>
+        <div class="flex items-center space-x-4 mb-10 justify-center lg:justify-start">
+          <a href="#about-me"
+            class="bg-biru text-white py-2 px-6 rounded-full shadow-lg hover:bg-kuning flex items-center space-x-2 w-fit">
+            <span>About Me</span>
+            <ion-icon size="medium" name="arrow-forward-outline"></ion-icon>
+          </a>
+          <a href="https://wa.me/6282280655324?text=Hello%20Muhammad%20Razan,%20I%20am%20interested%20in%20hiring%20you."
+            target="_blank"
+            class="bg-kuning text-white py-2 px-6 rounded-full shadow-lg hover:bg-biru flex items-center space-x-2 w-fit">
+            <span>Hire Me</span>
+            <ion-icon size="medium" name="megaphone-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="text-center md:text-start mt-8">
+          <p class="font-bold text-biru text-2xl">Contact Me:</p>
+          <div class="flex justify-center md:justify-start space-x-4 mt-4">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/razan.mazaya/" target="_blank" class="text-kuning hover:text-kuning">
+              <ion-icon name="logo-instagram" size="large"></ion-icon>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/muhammad-razan-mazaya-0417b921a" target="_blank"
+              class="text-blue-700 hover:text-blue-900">
+              <ion-icon name="logo-linkedin" size="large"></ion-icon>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6282280655324" target="_blank" class="text-green-500 hover:text-green-700">
+              <ion-icon name="logo-whatsapp" size="large"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Kanan: Foto dengan Bingkai Lingkaran -->
+      <div class="relative w-80 h-80 sm:w-64 sm:h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
+        <img src="foto/foto1.jpeg" alt="Foto Razan" class="w-full h-full object-cover">
+      </div>
+    </section>
+    <!-- Tentang Saya -->
+    <section id="about-me" class="bg-transparent py-12 px-8 min-h-screen flex flex-col justify-center"
+      data-aos="fade-left" data-aos-duration="1000">
+      <h2 class="text-4xl md:text-8xl text-center font-bold text-biru mb-8">About Me</h2>
+      <p class="text-lg md:text-3xl text-gray-700 text-justify mb-10 mx-auto">
+        Fresh graduate from the Department of Environmental Engineering, Andalas University. Responsible and hardworking
+        person with the ambition to learn new things. Executes critical thinking with a strong focus on developing
+        efficient solutions. Proficient in effective communication and adept at understanding the diverse needs of
+        stakeholders. Able to work in a team or individually, and easily adapt to other people.
+      </p>
+      <h2 class="text-xl md:text-2xl text-center font-semibold text-biru mb-4">Environmental Engineering, Andalas
+        University</h2>
+      <h2 class="text-xl md:text-2xl text-center font-bold text-biru mb-4">GPA : 3,55/4,0</h2>
+      <h2 class="text-xl md:text-2xl text-center font-semibold text-gray-700 mb-4">August 2020 - August 2024</h2>
+    </section>
+    <!-- Pengalaman Saya -->
+    <section id="pengalaman" class="bg-transparent py-12 px-8 min-h-screen" data-aos="fade-right"
+      data-aos-duration="1000">
+      <h2 class="text-4xl md:text-8xl text-center font-bold text-biru mb-8">My Experiences</h2>
+      <!-- Container untuk Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10 py-2">
+        <!-- Card 1 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">RESEARCH INTERNSHIP</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">PT. SEMEN PADANG</span>
+          </h3>
+          <span class="text-sm text-gray-500">MAY 2024 – JULY 2024</span>
+          <p class="text-gray-700 mt-4">
+            Conducting research for an undergraduate thesis titled “Environmental Health Risk Analysis of
+            Particulate Matter 2,5 (PM2,5) Exposure to Workers at the Packing Plant PT. Semen Padang”.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">ASSISTANT LECTURER</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">WASTE MANAGEMENT SYSTEM PLANNING</span>
+          </h3>
+          <span class="text-sm text-gray-500">FEBRUARY 2024 – AUGUST 2024</span>
+          <p class="text-gray-700 mt-4">
+            Guiding students on their assignment about waste management system planning a city.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">INTERNSHIP</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">PT. WILMAR NABATI INDONESIA</span>
+          </h3>
+          <span class="text-sm text-gray-500">SEPTEMBER, 2023 – OCTOBER, 2023</span>
+          <ul class="text-gray-700 mt-4 list-disc list-inside">
+            <li>Working for EHS (Environment, Health, and Safety) Department</li>
+            <li>Create hydrant quality procedures and fire pump inspection test</li>
+            <li>Create monthly report for EHS Department</li>
+            <li>Create quarterly reports for the P2K3 Team</li>
+            <li>Create evacuation route for the Refinery Area</li>
+            <li>Attend safety talk in Each Department</li>
+            <li>Conduct monthly fire extinguisher and hydrant checks</li>
+            <li>Provide socialization regarding waste management</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">ASSISTANT LECTURER</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">PLUMBING AND INSTRUMENTATION</span>
+          </h3>
+          <span class="text-sm text-gray-500">AUGUST, 2023 – JANUARY, 2024</span>
+          <p class="text-gray-700 mt-4">Guiding students on their assignment about plumbing and instrumentation.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">ASSISTANT LECTURER</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">DRINKING WATER SUPPLY TECHNIQUES</span>
+          </h3>
+          <span class="text-sm text-gray-500">AUGUST, 2023 – JANUARY, 2024</span>
+          <p class="text-gray-700 mt-4">Guiding students on their assignment about drinking water supply techniques.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">CHIEF DIRECTOR</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">ENVIRONMENTAL HEALTH CREATIVE TEAM UNAND</span>
+          </h3>
+          <span class="text-sm text-gray-500">JULY, 2023 – JULY, 2024</span>
+          <ul class="text-gray-700 mt-4 list-disc list-inside">
+            <li>Leading the organization</li>
+            <li>Provide outreach regarding occupational health and safety, environmental sanitation</li>
+            <li>Establish Cooperation with several companies and stakeholders</li>
+          </ul>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">INTERNAL VICE PRESIDENT</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">IMTLI REGIONAL 1</span>
+          </h3>
+          <span class="text-sm text-gray-500">MARCH, 2023 – JUNE, 2024</span>
+          <ul class="text-gray-700 mt-4 list-disc list-inside">
+            <li>Managing three departments in the internal section</li>
+            <li>Managing the relationship between fellow environmental engineering student associations in the Sumatra
+              region</li>
+          </ul>
+        </div>
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">LABORATORY ASSISTANT</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">ENVIRONMENTAL HYDRAULICS LABORATORY</span>
+          </h3>
+          <span class="text-sm text-gray-500">FEBRUARY, 2023 – JULY, 2023</span>
+          <p class="text-gray-700 mt-4">
+            Guiding students on their practicum about fluid mechanics.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">ASSISTANT LECTURER</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">ENGINEERING DRAWING</span>
+          </h3>
+          <span class="text-sm text-gray-500">FEBRUARY, 2023 – JULY, 2024</span>
+          <p class="text-gray-700 mt-4">
+            Guiding students on their assignment about their engineering drawing.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">STAFF OF ACADEMIC</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">HMTL FT-UNAND</span>
+          </h3>
+          <span class="text-sm text-gray-500">JANUARY, 2023 – JANUARY, 2024</span>
+          <p class="text-gray-700 mt-4">
+            Responsible for helping to implement the academic department's work program.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">ASSISTANT COORDINATOR</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">GEOGRAPHIC INFORMATION SYSTEM LABORATORY</span>
+          </h3>
+          <span class="text-sm text-gray-500">AUGUST, 2022 – JULY, 2024</span>
+          <p class="text-gray-700 mt-4">
+            <ul class="list-disc ml-5">
+              <li>Guiding students on their practicum</li>
+              <li>Coordinating assistants</li>
+              <li>Bridging the relationship between assistants and lecturers</li>
+            </ul>
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">STAFF OF HUMAN RESOURCE DEVELOPMENT</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">ENVIRONMENTAL HEALTH CREATIVE TEAM UNAND</span>
+          </h3>
+          <span class="text-sm text-gray-500">JULY, 2022 – JULY, 2023</span>
+          <p class="text-gray-700 mt-4">
+            Responsible for helping to implement the HRD Department’s program.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">CHIEF EXECUTIVE OF EVERGREEN 2 2022</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">HMTL FT-UNAND</span>
+          </h3>
+          <span class="text-sm text-gray-500">FEBRUARY, 2022 – MAY, 2022</span>
+          <p class="text-gray-700 mt-4">
+            Managing senior’s graduation celebration.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">PERSON IN CHARGE OF DATA HIMPUNAN</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">IMTLI REGIONAL 1</span>
+          </h3>
+          <span class="text-sm text-gray-500">JUNE, 2022 – JANUARY, 2023</span>
+          <p class="text-gray-700 mt-4">
+            Responsible for helping to implement the home affairs department's work program.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">STAFF OF HOME AFFAIRS DEPARTMENT</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">IMTLI REGIONAL 1</span>
+          </h3>
+          <span class="text-sm text-gray-500">APRIL, 2022 – JANUARY, 2023</span>
+          <p class="text-gray-700 mt-4">
+            Responsible for collecting Data Himpunan IMTLI Regional 1 2022.
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">HEAD OF HUMAN RESOURCE DEVELOPMENT</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">SOCIETY OF RENEWABLE ENERGY ANDALAS UNIVERSITY</span>
+          </h3>
+          <span class="text-sm text-gray-500">MARCH, 2022 – MARCH, 2023</span>
+          <p class="text-gray-700 mt-4">
+            <ul class="list-disc ml-5">
+              <li>Arranging open recruitment staff and members</li>
+              <li>Giving proper training to staff and members of the organization</li>
+            </ul>
+          </p>
+        </div>
+
+        <div
+          class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+          <h3 class="text-xl font-bold">
+            <span class="text-biru">STAFF OF HUMAN RESOURCE DEVELOPMENT</span>
+            <span class="text-black"> - </span>
+            <span class="text-kuning">SOCIETY OF RENEWABLE ENERGY ANDALAS UNIVERSITY</span>
+          </h3>
+          <span class="text-sm text-gray-500">FEBRUARY, 2021 – FEBRUARY, 2022</span>
+          <p class="text-gray-700 mt-4">
+            Responsible for helping to implement the HRD department's work program.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- kursus -->
+    <section id="kursus" class="certifications-courses mt-10 min-h-screen" data-aos="fade-left"
+      data-aos-duration="1000">
+      <h2 class="text-4xl md:text-8xl text-center font-bold text-biru mb-8">My Certifications and Courses</h2>
+      <div
+        class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300 mb-4">
+        <h3 class="text-xl font-bold text-kuning">CONTRACTOR SAFETY MANAGEMENT SYSTEM (CSMS)</h3>
+        <span class="text-sm text-gray-500">SEPT 2024</span>
+        <p class="text-gray-700 mt-4">
+          Focused on safety standards in oil and gas projects.
+        </p>
+      </div>
+
+      <div
+        class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300 mb-4">
+        <h3 class="text-xl font-bold text-kuning">TRAINING ISO 9001 : 2015</h3>
+        <span class="text-sm text-gray-500">OCT 2024</span>
+        <p class="text-gray-700 mt-4">
+          Quality Management System certification training.
+        </p>
+      </div>
+
+      <div
+        class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300 mb-4">
+        <h3 class="text-xl font-bold text-kuning">TRAINING ISO 14001 : 2015</h3>
+        <span class="text-sm text-gray-500">OCT 2024</span>
+        <p class="text-gray-700 mt-4">
+          Environmental Management System certification training.
+        </p>
+      </div>
+
+      <div
+        class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300 mb-4">
+        <h3 class="text-xl font-bold text-kuning">TRAINING ISO 45001 : 2018</h3>
+        <span class="text-sm text-gray-500">OCT 2024</span>
+        <p class="text-gray-700 mt-4">
+          Occupational Health and Safety Management System certification training.
+        </p>
+      </div>
+
+      <div
+        class="bg-white bg-opacity-80 backdrop-blur-lg rounded-lg shadow-xl p-6 hover:shadow-xl transition duration-300">
+        <h3 class="text-xl font-bold text-kuning">GENERAL OCCUPATIONAL HEALTH AND SAFETY SPECIALIST (AHLI K3 UMUM)</h3>
+        <span class="text-sm text-gray-500">OCT 2024</span>
+        <p class="text-gray-700 mt-4">
+          Comprehensive training for general occupational health and safety specialists.
+        </p>
+      </div>
+    </section>
+    <!-- Skill Section -->
+    <section id="skill" class="py-8 min-h-screen" data-aos="fade-right" data-aos-duration="1000">
+      <div class="max-w-4xl mx-auto py-12">
+        <h2 class="text-4xl md:text-8xl text-center font-bold text-biru mb-8">Skills</h2>
+        <div class="grid grid-cols-1 gap-4">
+          <div
+            class="bg-white bg-opacity-80 backdrop-blur-lg rounded-sm shadow-xl p-6 hover:shadow-xl transition duration-300">
+            <h3 class="text-xl font-bold text-kuning text-center">Technical Skills</h3>
+            <ul class="text-gray-700 mt-4 text-center">
+              <li>Autocad</li>
+              <li>ArcGIS</li>
+              <li>Epanet</li>
+              <li>Canva</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </div>
+          <div
+            class="bg-white bg-opacity-80 backdrop-blur-lg rounded-sm shadow-xl p-6 hover:shadow-xl transition duration-300">
+            <h3 class="text-xl font-bold text-kuning text-center">Soft Skills</h3>
+            <ul class="text-gray-700 mt-4 text-center">
+              <li>Leadership</li>
+              <li>Teamwork</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CV Section -->
+    <section id="cv" class="py-8 min-h-screen" data-aos="fade-left" data-aos-duration="1000">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-8xl text-center font-bold text-biru mb-8">My CV</h2>
+        <div
+          class="bg-transparent bg-opacity-80 backdrop-blur-lg rounded-sm shadow-xl p-6 hover:shadow-xl transition duration-300 text-center">
+
+          <embed src="cv/CVRAZAN.pdf" type="application/pdf" width="100%" height="500px"
+            class="rounded-md shadow-lg border" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Inisialisasi AOS setelah halaman dimuat
+    AOS.init();
+  </script>
+</body>
+
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<script>
+  window.onload = function () {
+    // Cek apakah ada hash di URL
+    if (window.location.hash === "") {
+      // Jika tidak ada hash, arahkan ke #selamat-datang
+      window.location.hash = "#selamat-datang";
+    } else if (window.location.hash !== "#selamat-datang") {
+      // Jika ada hash tetapi bukan #selamat-datang, ubah ke #selamat-datang
+      window.location.hash = "#selamat-datang";
+    }
+
+    // Tunggu sedikit agar elemen bisa diproses, lalu scroll ke elemen dengan ID yang sesuai
+    setTimeout(function () {
+      if (window.location.hash) {
+        const element = document.querySelector(window.location.hash);
+
+        // Hitung offset (tinggi header atau elemen yang fixed)
+        const headerHeight = document.querySelector('header')
+          .offsetHeight; // Ubah jika header Anda berbeda
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 100); // Waktu tunggu untuk memastikan elemen sudah diproses
+  };
+</script>
